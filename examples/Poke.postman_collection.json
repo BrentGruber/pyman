@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "b83a59ac-053f-438b-92ce-0dccf0a8ece8",
+		"name": "Poke",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Pokemon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/{{ name }}",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"{{ name }}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/type/{{ type }}",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"type",
+						"{{ type }}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ability",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/ability/{{ ability }}",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"ability",
+						"{{ ability }}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

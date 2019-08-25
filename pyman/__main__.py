@@ -1,6 +1,7 @@
 import sys
 import logging
-from .collection import foo
+from related import from_json,to_model
+from pyman.models import Collection
 
 
 def main():
@@ -17,12 +18,15 @@ def main():
     """
     Open the postman json file
     """
-    collection_json = open(sys.argv[1], "r")
+    collection_json = open(sys.argv[1]).read().strip()
 
     """
     Parse the json file into collection object
     """
-    foo()
+    json_dict = from_json(collection_json)
+    collection_model = to_model(Collection, json_dict)
+
+    print(collection_model)
 
     """
     Close the postman json file

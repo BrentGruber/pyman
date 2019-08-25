@@ -28,10 +28,5 @@ def main():
 
     print(collection_model)
 
-    """
-    Close the postman json file
-    """
-    collection_json.close()
-
 if __name__ == '__main__':
     main()

@@ -2,6 +2,7 @@ import sys
 import logging
 from related import from_json,to_model
 from pyman.models import Collection
+from pyman.generator import create_class_template
 
 
 def main():
@@ -26,7 +27,7 @@ def main():
     json_dict = from_json(collection_json)
     collection_model = to_model(Collection, json_dict)
 
-    print(collection_model)
+    create_class_template(json_dict)
 
 if __name__ == '__main__':
     main()

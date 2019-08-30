@@ -1,0 +1,28 @@
+import requests
+
+class {{ name }}:
+
+    def __init__(self):
+        self.url = "{{ base_url }}"
+        self.headers = {"Content-Type": "application/json"}
+
+{% for item in items %}
+    def {{ item.name | replace(" ","_") }}(self
+
+    {%- for param in item.request.url.path -%}
+        {%- if '{{' in param -%}
+        , {{ param | replace("{","") | replace("}","") | replace(" ","") }}
+        {%- endif -%}
+    {%- endfor -%}
+    ):
+
+        {% if "GET" in item.request.method.upper() -%}
+        r = requests.get(
+            f"{{ item.request.url.raw }}",
+            headers = self.headers,
+            verify=False
+        )
+
+        return r.json()
+        {% endif %}
+{%- endfor -%}

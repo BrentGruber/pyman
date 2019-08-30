@@ -6,7 +6,7 @@ setup(
     packages = ['pyman'],
     entry_points = {
         'console_scripts': [
-            'pyman = pyman.__main__:main'
+            'pyman = pyman.cli:main'
         ]
     }
 )

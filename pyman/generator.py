@@ -6,7 +6,7 @@ def create_class_template(collection):
     env = Environment(loader=file_loader)
     template = env.get_template('wrapper.txt')
 
-    msg = template.render(name="test", base_url="http://google.com", items=collection.get('item'))
+    msg = template.render(name=collection.get('info',{}).get('name'), base_url="http://google.com", items=collection.get('item'))
 
     with open("output.py", 'w') as outfile:
         outfile.write(msg)

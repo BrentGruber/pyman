@@ -18,7 +18,7 @@ class {{ name }}:
 
         {% if "GET" in item.request.method.upper() -%}
         r = requests.get(
-            f"{{ item.request.url.raw }}",
+            f"{{ item.request.url.raw | replace("{{","{") | replace("}}", "}") | replace(" ", "") }}",
             headers = self.headers,
             verify=False
         )

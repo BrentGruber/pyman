@@ -22,7 +22,7 @@ pytest==5.1.1
 pytest-forked==1.0.2
 pytest-xdist==1.29.0
 python-dateutil==2.8.0
-PyYAML==5.1.2
+PyYAML==5.4
 related==0.7.2
 six==1.12.0
 typed-ast==1.4.0
